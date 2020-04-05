@@ -1,25 +1,42 @@
 import React from 'react';
-import logo from './logo.svg';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+
 import './App.css';
+import Episodes from './components/episode/ListEpisode'
+import EpisodeHome from './components/episode/EpisodeHome'
+import CharacterHome from './components/character/CharacterHome'
+
+import LocationHome from './components/location/LocationHome'
+
+import SearchBar from './components/searchBar/SearchBar'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <SearchBar />
+      <div className="App"> 
+
+      <Route path={`/episode/:id`} component={EpisodeHome}/>
+      <Route path={`/character/:id`} component={CharacterHome}/>
+      <Route path={`/location/:id`} component={LocationHome}/>
+
+       <Switch>
+          
+          <Route path="/episode">
+            <Episodes />
+          </Route>
+          <Route exact path="/">
+            <Episodes />
+          </Route>
+        </Switch>
+
+      </div>
+    </Router>
+
   );
 }
 
