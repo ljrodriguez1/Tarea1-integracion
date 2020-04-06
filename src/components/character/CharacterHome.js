@@ -42,7 +42,7 @@ class EpisodeHome extends Component {
     }
 
     createEpisode(id) {
-        let base = 'https://rickandmortyapi.com/api/character/'
+        let base = 'https://integracion-rick-morty-api.herokuapp.com/api/character/'
         let url = base.concat(id)
         fetch(url)
         .then(results => {

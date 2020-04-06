@@ -22,7 +22,7 @@ class ListEpisode extends Component {
     
 
     createEpisodes(characters) {
-        let base = 'https://rickandmortyapi.com/api/character/'
+        let base = 'https://integracion-rick-morty-api.herokuapp.com/api/character/'
         characters = characters.join(',')
         let url = base.concat(characters)
         fetch(url)

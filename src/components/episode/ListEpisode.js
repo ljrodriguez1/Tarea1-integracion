@@ -27,7 +27,7 @@ class ListEpisode extends Component {
     
 
     createEpisodes(page) {
-        let base = 'https://rickandmortyapi.com/api/episode/?page='
+        let base = 'https://integracion-rick-morty-api.herokuapp.com/api/episode/?page='
         let url = base.concat(page)
         fetch(url)
         .then(results => {

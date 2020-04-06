@@ -22,7 +22,7 @@ class LocationHome extends Component {
     
 
     createEpisode(id) {
-        let base = 'https://rickandmortyapi.com/api/location/'
+        let base = 'https://integracion-rick-morty-api.herokuapp.com/api/location/'
         let url = base.concat(id)
         fetch(url)
         .then(results => {

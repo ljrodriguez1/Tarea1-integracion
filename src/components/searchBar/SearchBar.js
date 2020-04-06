@@ -42,7 +42,7 @@ class SearchBar extends Component {
     }
 
     async createSearch() {
-        let base = ['https://rickandmortyapi.com/api/episode/', 'https://rickandmortyapi.com/api/character/', 'https://rickandmortyapi.com/api/location/']
+        let base = ['https://integracion-rick-morty-api.herokuapp.com/api/episode/', 'https://integracion-rick-morty-api.herokuapp.com/api/character/', 'https://integracion-rick-morty-api.herokuapp.com/api/location/']
         await this.getData.bind(this)(base, base[0], [], 0);
     }
 
